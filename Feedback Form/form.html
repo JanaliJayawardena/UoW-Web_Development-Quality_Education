@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quality Education</title>
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <nav>
+      <img src="logo.png" alt="Logo" class="navbar-logo" />
+      <div class="nav-items">
+        <a href="../Home/home.html" class="nav-home nav-item">Home</a>
+        <a href="../gallery/gallery.html" class="nav-gallery nav-item">Gallery</a>
+        <a href="../shop/shop.html" class="nav-shop nav-item">Shop</a>
+        <a href="../WEB user profile/user-profile.html" class="nav-profile nav-item"
+          >User Profile</a
+        >
+        <a href="../Feedback Form/form.html" class="nav-feedback nav-item current-page"
+          >Feedback Form</a
+        >
+        <a href="../sitemap/Sitemap.html" class="nav-sitemap nav-item">Sitemap</a>
+        <a href="../WEB our team done/OUR TEAM.html TEAM.html" class="nav-team nav-item">Team</a>
+      </div>
+    </nav>
+    <div class="header-section">
+      <h1>Feedback Form</h1>
+      <p class="required-fields">* Required fields</p>
+      <!-- Moved required fields here -->
+    </div>
+    <div class="form-container">
+      <div class="question-section">
+        <form id="feedback-form">
+          <div class="form-section">
+            <label for="name">Name*</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Enter your name"
+            />
+            <label for="email">Email*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div class="form-section">
+            <label>Was this your first time visiting?</label>
+            <div class="radio-group">
+              <label
+                ><input type="radio" name="first-visit" value="yes" />
+                Yes</label
+              >
+              <label
+                ><input type="radio" name="first-visit" value="no" /> No</label
+              >
+            </div>
+          </div>
+
+          <div class="form-section">
+            <label
+              >Was this website informative and easy to navigate through?</label
+            >
+            <div class="radio-group">
+              <label
+                ><input type="radio" name="informative" value="yes" />
+                Yes</label
+              >
+              <label
+                ><input type="radio" name="informative" value="no" /> No</label
+              >
+            </div>
+            <div id="improvements-section" style="display: none">
+              <label for="improvements"
+                >If 'NO', suggest any improvements for the future:*</label
+              >
+              <textarea
+                id="improvements"
+                name="improvements"
+                placeholder="Add your message here..."
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <label>Please rate your experience:</label>
+            <div class="star-rating">
+              <span class="star" data-value="1">&#9733;</span>
+              <span class="star" data-value="2">&#9733;</span>
+              <span class="star" data-value="3">&#9733;</span>
+              <span class="star" data-value="4">&#9733;</span>
+              <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <input
+              type="hidden"
+              id="star-rating"
+              name="star-rating"
+              value="0"
+            />
+            <!-- Hidden input to store the selected rating -->
+          </div>
+
+          <div class="form-section">
+            <label for="updates"
+              >Would you like to receive updates about the website and any
+              offers?*<br
+            /></label>
+            <select id="updates" name="updates" required>
+              <option value="">Select an option</option>
+              <option value="email">Yes, via email</option>
+              <option value="whatsapp">Yes, via WhatsApp</option>
+              <option value="no">No, thanks</option>
+            </select>
+          </div>
+
+          <div class="form-section">
+            <label for="additional-questions"
+              >Do you have any additional questions or requests?</label
+            >
+            <textarea
+              id="additional-questions"
+              name="additional-questions"
+              placeholder="Enter your additional questions or requests here..."
+            ></textarea>
+          </div>
+
+          <button type="button" id="submit-btn">Submit</button>
+          <button type="button" id="edit-btn" style="display: none">
+            Edit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="preview-container" class="preview-container">
+      <div class="preview-content">
+        <span id="preview-text"></span>
+        <div>
+          <button id="confirm-btn">Submit</button>
+          <button id="cancel-btn">Edit</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="thank-you-message">
+      <h2>Thank you for your Feedback!</h2>
+    </div>
+    <footer>
+      <div class="footer-column">
+        <h5 class="footer-heading">Navigation</h5>
+        <a href="../Home/home.html" class="footer-link">Home</a>
+        <a href="../gallery/gallery.html" class="footer-link">Gallery</a>
+        <a href="../shop/shop.html" class="footer-link">Shop</a>
+        <a href="../WEB user profile/user-profile.html" class="footer-link">User Profile</a>
+        <a href="../Feedback Form/form.html" class="footer-link">Feedback Form</a>
+        <a href="../sitemap/Sitemap.html" class="footer-link">Sitemap</a>
+        <a href="../WEB our team done/OUR TEAM.html" class="footer-link last-link">Team</a>
+      </div>
+      <div class="footer-column">
+        <h5 class="footer-heading">Social Media</h5>
+        <a href="#" class="footer-link social-link"
+          ><svg
+            style="color: white"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"
+              fill="white"
+            ></path>
+          </svg>
+          <span class="social-name">Facebook</span>
+        </a>
+        <a href="#" class="footer-link social-link"
+          ><svg
+            style="color: white"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+              fill="white"
+            ></path>
+          </svg>
+          <span class="social-name">Instagram</span></a
+        >
+        <a href="#" class="footer-link social-link last-link"
+          ><svg
+            style="color: white"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            version="1.1"
+          >
+            <path
+              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              fill="white"
+            ></path>
+          </svg>
+          <span class="social-name">X</span></a
+        >
+      </div>
+      <div class="footer-column">
+        <h5 class="footer-heading">Page Edior</h5>
+        <a
+          href="../pageeditor-janali/janali-editor.html"
+          target="_blank"
+          class="footer-link last-link"
+          >Janali Jayawardena</a
+        >
+      </div>
+    </footer>
+    <script src="form.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "AiDHtkzSjrSbsNtDt",
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&dihrefsplay=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(37, 37, 37);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5192d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5192dd6;
+}
+
+/* Navigation Bar */
+
+nav {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  background-color: #f4f4f2;
+  padding: 15px;
+  z-index: 99;
+  flex-wrap: wrap;
+}
+
+.navbar-logo {
+  width: auto;
+  height: 90%;
+}
+
+.nav-items {
+  width: 70%;
+  height: 100%;
+  right: 0;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  text-decoration: none;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Plus Jakarta Sans", "Helvetica";
+  font-weight: 500;
+  color: #000;
+  font-size: 1.3rem;
+  flex: 1 0 auto;
+}
+
+nav div a {
+  position: relative;
+}
+
+.nav-item::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #c5192d;
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav div a:hover::before {
+  width: 80%;
+}
+
+.current-page::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #c5192d;
+  position: absolute;
+  bottom: 0;
+  width: 70%;
+}
+
+.current-page {
+  color: #c5192d;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", "Helvetica";
+  background-color: black;
+  margin: 0;
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="date"],
+  input[type="time"],
+  input[type="url"],
+  input[type="search"],
+  input[type="color"],
+  input[type="range"],
+  input[type="file"],
+  input[type="radio"],
+  input[type="checkbox"],
+  select,
+  textarea,
+  button {
+    border: 1px solid #ccc; /* Adjust border properties as needed */
+  }
+}
+
+.header-section {
+  background-color: rgb(169, 33, 33);
+  padding: 20px;
+  text-align: center;
+}
+
+.header-section h1 {
+  margin: 0;
+  color: white;
+}
+
+.form-container {
+  padding: 0 20px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.form-container,
+.thank-you-message {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+}
+.required-fields {
+  color: #000;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star-rating .star:hover,
+.star-rating .star.active {
+  color: #ffd700;
+}
+
+.preview-container {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.preview-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+#thank-you-message {
+  display: none;
+  position: sticky;
+  z-index: 2;
+  left: 50%;
+  top: 20px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 50px;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-btn,
+.cancel-btn {
+  background-color: #c5192d;
+}
+
+/* Footer */
+
+footer {
+  background-color: #0b0b0d;
+  font-family: "Plus Jakarta Sans", "Helvetica";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 35px 0 25px 0;
+}
+
+.footer-heading {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  display: block;
+}
+.footer-link {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+.footer-link:not(.last-link) {
+  margin-bottom: 5px;
+}
+
+.footer-link:hover {
+  color: #c5192d;
+  transition: 0.1s;
+}
+
+.footer-link svg {
+  height: 20px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.social-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px !important;
+}

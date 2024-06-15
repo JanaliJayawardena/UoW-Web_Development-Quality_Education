@@ -1,0 +1,93 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(37, 37, 37);
+}
+
+::-webkit-scrollbar-thumb {
+  background:rgb(243, 202, 209);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(243, 202, 209);
+}
+
+
+
+
+body {
+  font-family: "Plus Jakarta Sans", "Helvetica";
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: black;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+li {
+  margin-bottom: 20px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+h3 {
+  background-color: rgb(243, 202, 209); /* Added background color */
+}
+p{
+  text-align: justify;
+}
+
+li:hover {
+  transform: translateY(-5px);
+}
+
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(243, 202, 209);
+  color:black;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: rgb(244, 139, 156);
+}
